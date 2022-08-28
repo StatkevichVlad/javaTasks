@@ -40,18 +40,48 @@ public class RomanianToInteger {
         int result = 0;
         char[] charArr = s.toCharArray();
         int tmp = 0;
+
         for (int i = 0; i < charArr.length; i++) {
             for (Map.Entry<Character, Integer> entry : map.entrySet()) {
                 if (entry.getKey().equals(charArr[i])) {
                     result += entry.getValue();
+
                     if (tmp < entry.getValue()) {
                         result -= (tmp * 2);
                     }
+
                     tmp = entry.getValue();
                 }
-
             }
         }
+        return result;
+    }
+
+    public static int romanToInt1(String s) {
+        Map<Character, Integer> map = new HashMap();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
+
+        int result = 0;
+        char[] charArr = s.toCharArray();
+        int tmp = 0;
+
+        for (int i = 0; i < charArr.length; i++) {
+            int value = map.get(charArr[i]);
+           result += value;
+
+            if (tmp < value) {
+                result -= (tmp * 2);
+            }
+
+            tmp = value;
+        }
+
         return result;
     }
 

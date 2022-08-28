@@ -11,4 +11,8 @@ public class RDFSA {
                     .toArray()
                     .length;
     }
+
+    public int[] removeDuplicatesArray(int[] nums) {
+        return null;
+    }
 }

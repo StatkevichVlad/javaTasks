@@ -1,4 +1,4 @@
-package searchInsertPosition;
+package tasks.searchInsertPosition;
 
 public class Main {
     public static void main(String[] args) {
