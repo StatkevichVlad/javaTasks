@@ -18,6 +18,8 @@ public class TakeATenMinutesWalk {
         int x = 0;
         int y = 0;
 
+
+
        if (walk.length != 10 ){
            return false;
        }
@@ -40,4 +42,6 @@ public class TakeATenMinutesWalk {
 
         return (y == 0 && x == 0) ? true : false;
     }
+
+
 }
